@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    figure {
+      border: 1px solid black;
+      width: -webkit-fill-available;
+      /*width: min-content;*/
+      /*width: max-content;*/
+      /*width: fit-content;*/
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+<p>Some text [...]Some text [...]Some text [...]Some text [...]Some text
+  [...]Some text [...]Some text [...]Some text [...]Some text [...]Some text
+  [...]Some text [...]Some text [...]Some text [...]Some text [...]Some text
+  [...]Some text [...]</p> HTML
+<div style="background: blue">
+  <figure id="figure">
+    <img src="e7edf1c08767d431b36e96ae873eb17b.jpeg"/>
+    <figcaption>The great
+      Sir Adam Catlace was named after Countess Ada Lovelace, the first first
+      first first first first first first first first first first first first
+      first first first first first first first
+    </figcaption>
+  </figure>
+</div>
+<p>More text [...].dddddddd</p>
+<script>
+  window.onload = function () {
+    var obj = document.getElementById("figure");
+    var style = null;
+    if (window.getComputedStyle) {
+      style = window.getComputedStyle(obj, null);    // 非IE
+    } else {
+      style = obj.currentStyle;  // IE
+    }
+    alert("width=" + style.width + "\nheight=" + style.height);
+  }
+</script>
+
+</body>
+</html>
